@@ -10,10 +10,10 @@ const express = require('express');
 const app = express();
 
 app.use(requireHTTPS);
-app.use(express.static('./dist/pokedex'));
+app.use(express.static('./dist/dorledex'));
 
 app.get('/*', (req, res) =>
-  res.sendFile('index.html', {root: 'dist/pokedex/'}),
+  res.sendFile('index.html', {root: 'dist/dorledex/'}),
 );
 
 app.listen(process.env.PORT || 8080);
